@@ -53,28 +53,35 @@ You should see options such as:
 
 # Step 4 — Check ADB on Windows
 Run : 
+
 *adb version*
+
 (If ADB is installed correctly, you'll see something similar to : 
 Android Debug Bridge version ...)
 
 If PowerShell says:
 *adb : The term 'adb' is not recognized*
-(then ADB isn't available in your PATH yet. Tell me what you get and we'll fix that before continuing.)
+
+(then ADB isn't available in your PATH yet.)
 
 # Step 5 — Start the ADB server
 Run:
+
 *adb start-server*
 
 You may see:
-* daemon started successfully *
+*daemon started successfully*
   
 Now run:
+
 *adb devices*
+
 (At this point, don't worry if your phone isn't listed yet because we're setting up wireless ADB)
 
 # Step 6 — Pair the phone with PowerShell
 
 On your phone:
+
 *Developer options → Wireless debugging → Pair device with pairing code*
 
 You'll see something like:
@@ -84,7 +91,7 @@ You'll see something like:
 
 Keep this screen open.
 
-*In PowerShell, run:*
+In PowerShell, run:
 
 *adb pair IP_ADDRESS:PAIRING_PORT*
 
@@ -100,7 +107,7 @@ If successful, you'll get something like:
 
 *Successfully paired to ...*
 
-*Important*
+* Important *
 The pairing port and the later ADB connection port may be different.
 Don't assume they are the same.
 
@@ -123,6 +130,7 @@ That means ADB recognizes the phone as an authorized device.
 Now we use scrcpy.
 scrcpy allows you to display and interact with your Android device from your computer.
 After installing scrcpy and making sure it's available 
+
 In PowerShell, run:
 
 *scrcpy*
